@@ -1,0 +1,5 @@
+# ignore distribution output
+dist
+
+# ignore node dependencies
+node_modules
