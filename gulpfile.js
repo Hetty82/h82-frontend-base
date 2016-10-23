@@ -1,5 +1,6 @@
 // Gulp variables
 const gulp          = require('gulp');
+const sassGlob      = require('gulp-sass-glob');
 const sass          = require('gulp-sass');
 const autoprefixer  = require('gulp-autoprefixer');
 const cssnano       = require('gulp-cssnano');
@@ -13,6 +14,7 @@ const browserSync   = require('browser-sync').create();
 // Compilation tasks
 gulp.task('styles', function(){
   return gulp.src('src/sass/**/*.+(scss|sass)')
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
@@ -25,10 +27,8 @@ gulp.task('styles', function(){
 
 gulp.task('scripts', function(){
   return gulp.src('src/js/**/*.js')
-    // .pipe(browserify())
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
-    // .pipe(browserSync.reload());
 });
 
 gulp.task('images', function(){
