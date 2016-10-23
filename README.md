@@ -3,21 +3,32 @@
 Setup for frontend project
 
 ## Todo
-- add gulp
-- add index.html
-- add src/ and dist/
-- setup gulp
-  - sass
-  - slim
-  - minification
+v add gulp
+v add index.html
+v add src/ and dist/
+v add base html
+v setup gulp
+  v sass
+  v sass globbing
+  v css autoprefixer
+  v css minify
+  v js uglify
+  v imagemin
+  v image cache
+  v browsersync
+  v runSequence
+  v clean, watch, build, default
+
+- more gulp
+  - pug (jade)
   - browserify
   - load-tasks
   - svgstore
-  - uglify
   - notify
   - png sprite
   - plumber
+  - split up gulpfile
+
 - add base styles
 - add base mixins
 - add base vars
-- add base html
